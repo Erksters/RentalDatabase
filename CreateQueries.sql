@@ -1,5 +1,11 @@
 Create DATABASE Properties --HELP#
 
+Drop Table if exists ContractAgreement
+Drop Table if exists Contract
+Drop Table if exists  Tenant
+Drop Table if exists Apartment
+Drop Table if exists PropertyOwner
+
 Create Table PropertyOwner(
 	PropertyOwnerID INT NOT NULL Identity(1,1) Primary Key,
 	FirstName NVarchar(64) NOT NULL,
@@ -27,7 +33,7 @@ Create Table Apartment(
 	CentralAC TinyInt NOT NULL Default(1),
 	DateAvailable DATE NULL DEFAULT(SYSDATETIMEOFFSET()),
 	YearBuilt DATE NOT NULL,
-	MyPropertyOwner Int Not Null FOREIGN KEY (MyPropertyOwner) References #PropertyOwner(PropertyOwnerID),
+	MyPropertyOwner Int Not Null FOREIGN KEY (MyPropertyOwner) References PropertyOwner(PropertyOwnerID),
 
 	CreatedOn DATE NOT NULL DEFAULT(SYSDATETIMEOFFSET()),
     UpdatedOn DATE NOT NULL DEFAULT(SYSDATETIMEOFFSET()),
@@ -41,7 +47,7 @@ Create Table Tenant(
 	FirstName NVarchar(64) NOT NULL,
 	LastName NVarchar(64) NOT NULL,
 	Email NVarchar(64) NOT NULL,
-	PhoneNumber Int NOT NULL,
+	PhoneNumber NVarChar(10) NOT NULL,
 	CreatedOn DATE NOT NULL DEFAULT(SYSDATETIMEOFFSET()),
     UpdatedOn DATE NOT NULL DEFAULT(SYSDATETIMEOFFSET()),
 
@@ -50,7 +56,7 @@ Create Table Tenant(
 
 Create Table [Contract](
 	ContractID INT NOT NULL Identity(1,1) Primary Key,
-	ApartmentID Int Not Null FOREIGN KEY (ApartmentID) References #Apartment(ApartmentID),
+	ApartmentID Int Not Null FOREIGN KEY (ApartmentID) References Apartment(ApartmentID),
 	DateSigned DATE NOT NULL DEFAULT(SYSDATETIMEOFFSET()),
 	DateInEffect DATE NOT NULL DEFAULT(SYSDATETIMEOFFSET()),
 	DateExpires DATE NOT NULL DEFAULT(SYSDATETIMEOFFSET()),
@@ -59,7 +65,7 @@ Create Table [Contract](
 
 Create Table ContractAgreement(
 	ContractAgreement INT NOT NULL Identity(1,1) Primary Key,
-	ContractID Int Not Null FOREIGN KEY (ContractID) References #Contract(ApartmentID),
-	TenantID Int Not Null FOREIGN KEY (TenantID) References #Tenant(ApartmentID),
+	ContractID Int Not Null FOREIGN KEY (ContractID) References Contract(ContractID),
+	TenantID Int Not Null FOREIGN KEY (TenantID) References Tenant(TenantID),
 	UNIQUE(ContractID, TenantID)	
 );
