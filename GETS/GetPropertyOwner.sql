@@ -11,7 +11,7 @@ Declare @isID Int = Null
 Select * 
 From #PropertyOwners PO
 Where (@isID IS NOT NULL AND (PO.PropertyOwnerID = @isID)) OR
-(@isFirstName IS NOT NULL AND (PO.FirstName = @isFirstName)) OR
-(@isLastName IS NOT NULL AND (PO.LastName = @isLastName)) OR
-(@isEmail IS NOT NULL AND (PO.Email = @isEmail)) OR
-(@isPhone IS NOT NULL AND (PO.Phone = @isPhone) OR
+		(@isFirstName IS NOT NULL AND (PO.FirstName = @isFirstName)) OR
+		(@isLastName IS NOT NULL AND (PO.LastName = @isLastName)) OR
+		(@isEmail IS NOT NULL AND (PO.Email = @isEmail)) OR
+		(@isPhone IS NOT NULL AND (PO.Phone = @isPhone))
