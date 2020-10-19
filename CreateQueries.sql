@@ -11,7 +11,7 @@ Create Table PropertyOwner(
 	FirstName NVarchar(64) NOT NULL,
 	LastName NVarchar(64) NOT NULL,
 	Email NVarchar(64) NOT NULL,
-	PhoneNumber Int NOT NULL,
+	PhoneNumber NVarChar(10) NOT NULL,
 	CreatedOn DATE NOT NULL DEFAULT(SYSDATETIMEOFFSET()),
     UpdatedOn DATE NOT NULL DEFAULT(SYSDATETIMEOFFSET()),
 
