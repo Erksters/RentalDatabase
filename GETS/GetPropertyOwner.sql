@@ -1,3 +1,5 @@
+--PropertyOwners
+--Author Erick Saenz
 
 Declare @isFirstName NVARCHAR = Null;
 Declare @isLastName NVARCHAR = Null;
