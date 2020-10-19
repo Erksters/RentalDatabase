@@ -12,9 +12,10 @@ Declare @isEmail NVARCHAR = Null;
 --Catch keep it as null the query will know
 
 Select * 
-From #Tenant T
+From Tenant T
 Where (@isID IS NOT NULL AND (T.TenantID = @isID)) OR
 		(@isFirstName IS NOT NULL AND (T.FirstName = @isFirstName)) OR
 		(@isLastName IS NOT NULL AND (T.LastName = @isLastName)) OR
 		(@isEmail IS NOT NULL AND (T.Email = @isEmail)) OR
-		(@isPhone IS NOT NULL AND (T.PhoneNumber))
+		(@isPhone IS NOT NULL AND (T.PhoneNumber = @isPhone))
+
