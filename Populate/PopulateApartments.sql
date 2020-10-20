@@ -20,7 +20,7 @@ INSERT INTO Apartment(
 VALUES 
 			(
 			599,            --Monthly Price 
-			'123 Main',
+			'921 Main',
 			null,
 			'Manhattan',
 			'66502',
@@ -36,7 +36,7 @@ VALUES
 		  ),
 		  (
 			499,            --Monthly Price
-			'323 Main',
+			'323 Jordan',
 			'#2',
 			'Topeka',
 			'66506',
@@ -52,7 +52,7 @@ VALUES
 		  ),
 		  (
 			399,        --Monthly Price
-			'579 Main',
+			'579 3rd',
 			'#18',
 			'Topeka',
 			'66506',
@@ -68,7 +68,7 @@ VALUES
 		  ),
 		  (
 			799,        --Monthly Price
-			'889 Main',
+			'889 Johnson',
 			null,
 			'Kansas City',
 			'66509',
@@ -84,7 +84,7 @@ VALUES
 		  ),
 		  (
 			699,        --Monthly Price
-			'777 Main',
+			'777 Freedom',
 			'#9',
 			'Dodge City',
 			'66501',
