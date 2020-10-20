@@ -1,4 +1,4 @@
---populate Table PropertyOwnder
+--populate Table Apartments
 --Author Erick Saenz
 
 INSERT INTO Apartment(

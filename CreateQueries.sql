@@ -1,4 +1,5 @@
-Create DATABASE Properties --HELP#
+Create DATABASE Properties
+Drop Database Properties
 
 Drop Table if exists ContractAgreement
 Drop Table if exists Contract
@@ -64,7 +65,7 @@ Create Table [Contract](
 );
 
 Create Table ContractAgreement(
-	ContractAgreement INT NOT NULL Identity(1,1) Primary Key,
+	ContractAgreementID INT NOT NULL Identity(1,1) Primary Key,
 	ContractID Int Not Null FOREIGN KEY (ContractID) References Contract(ContractID),
 	TenantID Int Not Null FOREIGN KEY (TenantID) References Tenant(TenantID),
 	UNIQUE(ContractID, TenantID)	
