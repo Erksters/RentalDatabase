@@ -1,12 +1,6 @@
 --Populate Table ContractAgreements
 --Author Erick Saenz
 
-Select * 
-From Contract
-
-Select *
-From Tenant
-
 INSERT INTO ContractAgreement(
 		ContractID,
 		TenantID
@@ -28,3 +22,6 @@ VALUES
 		4,
 		4
 	)
+
+	Select *
+	From ContractAgreement
