@@ -1,4 +1,4 @@
---populate Table PropertyOwnder
+--Populate Table PropertyOwner
 --Author Erick Saenz
 
 INSERT INTO PropertyOwner(
