@@ -1,3 +1,6 @@
+--populate Table PropertyOwnder
+--Author Erick Saenz
+
 INSERT INTO PropertyOwner(
     FirstName,
     LastName,
