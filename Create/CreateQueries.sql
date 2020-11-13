@@ -1,11 +1,11 @@
 Create DATABASE Properties
 Drop Database Properties
 
-Drop Table if exists ContractAgreement
-Drop Table if exists Contract
-Drop Table if exists  Tenant
-Drop Table if exists Apartment
-Drop Table if exists PropertyOwner
+Drop Table if exists ContractAgreement;
+Drop Table if exists Contract;
+Drop Table if exists  Tenant;
+Drop Table if exists Apartment;
+Drop Table if exists PropertyOwner;
 
 Create Table PropertyOwner(
 	PropertyOwnerID INT NOT NULL Identity(1,1) Primary Key,
